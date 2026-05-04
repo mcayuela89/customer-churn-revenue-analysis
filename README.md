@@ -2,72 +2,62 @@
 
 End-to-end data analytics project focused on customer churn and its impact on revenue in a subscription-based (telco) business model.
 
+El objetivo es identificar los principales factores que influyen en el abandono de clientes y extraer insights accionables desde un punto de vista de negocio.
+
 ---
 
 ## 📊 Dashboard Preview
 
-*(Añadir aquí imagen cuando tengas Power BI exportado)*
+### 🔹 Resumen Ejecutivo
+![Overview](docs/dashboard_overview.png)
 
-![Dashboard Preview](docs/dashboard.png)
+### 🔹 Análisis de Churn
+![Analysis](docs/dashboard_analysis.png)
 
 ---
 
 ## 🧱 Data Pipeline
 
-1. **Data ingestion (CSV)**
-   - Telco Customer Churn dataset (IBM)
-
-2. **Data cleaning & transformation (Python - Pandas)**
-   - Conversión de `TotalCharges` a formato numérico
-   - Eliminación de valores nulos
-   - Codificación de variable objetivo (`Churn` → 0/1)
-
-3. **Exploratory Data Analysis (EDA)**
-   - Distribución de churn
-   - Análisis por contrato, antigüedad y cargos
-
-4. **Processed dataset**
-   - Exportado a `data/processed/clean_churn.csv`
-
-5. **Business analysis**
-   - Cálculo de churn rate
-   - Estimación de revenue perdido
-
-6. **(Next steps)**
-   - SQL analysis  
-   - Power BI dashboard  
+- Data ingestion (CSV) – Telco Customer Churn dataset (IBM)
+- Data cleaning & transformation (Python - Pandas)
+  - Conversión de `TotalCharges` a formato numérico
+  - Eliminación de valores nulos
+  - Codificación de variable objetivo (`Churn → 0/1`)
+- Exploratory Data Analysis (EDA)
+  - Distribución de churn
+  - Análisis por contrato, antigüedad y cargos
+- Processed dataset → `data/processed/clean_churn.csv`
+- Business analysis
+  - Cálculo de churn rate
+  - Estimación de revenue perdido
+- SQL analysis
+- Power BI dashboard
 
 ---
 
 ## 🚀 Key Insights
 
-- 📉 **Churn rate ~27%**  
-  Una proporción significativa de clientes abandona el servicio.
-
-- 💰 **~30% del revenue en riesgo**  
-  El churn impacta directamente en los ingresos mensuales.
-
-- 📄 **Contrato mensual = mayor churn**  
-  Los clientes *month-to-month* son los más propensos a abandonar.
-
-- ⏳ **Clientes nuevos = mayor riesgo**  
-  El churn se concentra en los primeros meses (bajo tenure).
-
-- 💳 **Mayor precio → mayor churn**  
-  Los clientes con cargos más altos muestran mayor probabilidad de abandono.
+- 📉 Churn rate ~27%: una proporción significativa de clientes abandona el servicio
+- 💰 ~30% del revenue está en riesgo debido al churn
+- 📄 Los contratos mensuales presentan mayor tasa de abandono
+- ⏳ El churn se concentra en los primeros meses del cliente (bajo tenure)
+- 🌐 Los clientes con fibra óptica presentan mayor churn
+- 💳 El método de pago *Electronic check* está asociado a mayor abandono
 
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python (pandas, seaborn, matplotlib)  
-- SQL  
-- Power BI  
+- Python (Pandas, Matplotlib, Seaborn)
+- SQL (PostgreSQL)
+- Power BI
 
 ---
 
 ## 🎯 Conclusion
 
-El churn representa un problema crítico con impacto directo en ingresos.  
-La identificación temprana de clientes en riesgo y estrategias de retención pueden mejorar significativamente la rentabilidad del negocio.
+- Mejorar el onboarding puede reducir el churn en los primeros meses
+- Revisar el servicio de fibra óptica como posible punto de fricción
+- Incentivar métodos de pago automáticos puede mejorar la retención
+- Fomentar contratos a largo plazo reduce el riesgo de abandono
